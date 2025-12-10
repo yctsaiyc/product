@@ -1,27 +1,16 @@
-import os
+from Company import Company
 import requests
-from bs4 import BeautifulSoup
 import pandas as pd
-import re
 import urllib3
 
 
-class WC:
-    def __init__(self, data_dir="data"):
-        self.data_dir = data_dir
-        self.brand_url = "https://www.weichuan.com.tw/tw/product/brand"
-        self.setup()
-
-        self.columns = ["類別", "子類別", "公司", "品牌", "產品", "規格"]
+class WC(Company):
+    def __init__(self, data_dir="data", config_path="mapping.json"):
+        super().__init__(data_dir, config_path)
 
     def setup(self):
-        os.makedirs(self.data_dir, exist_ok=True)
-
+        super().setup()
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-        # pd.set_option('display.max_rows', None)
-        pd.set_option("display.max_columns", None)
-        pd.set_option("display.max_colwidth", None)
 
     def get_category_list(self):
         url = "https://www.weichuan.com.tw/api/brand-category-list"
@@ -79,12 +68,6 @@ class WC:
             product_df = pd.concat([product_df, df])
 
         return product_df
-
-    def save_csv(self):
-        df = self.get_product_df()
-        csv_path = os.path.join(self.data_dir, "WC_product.csv")
-        df.to_csv(csv_path, index=False, encoding="utf-8-sig")
-        print(f"Saved: {csv_path}")
 
 
 if __name__ == "__main__":

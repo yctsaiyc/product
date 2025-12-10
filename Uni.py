@@ -1,24 +1,14 @@
-import os
+from Company import Company
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
 
-class Uni:
-    def __init__(self, data_dir="data"):
-        self.data_dir = data_dir
+class Uni(Company):
+    def __init__(self, data_dir="data", config_path="mapping.json"):
+        super().__init__(data_dir, config_path)
         self.brand_url = "https://www.pecos.com.tw/brands.html"
-        self.setup()
-
         self.brand_columns = ["類別", "品牌", "URL"]
-        self.columns = ["類別", "子類別", "公司", "品牌", "產品", "規格"]
-
-    def setup(self):
-        os.makedirs(self.data_dir, exist_ok=True)
-
-        # pd.set_option('display.max_rows', None)
-        pd.set_option("display.max_columns", None)
-        pd.set_option("display.max_colwidth", None)
 
     def get_category_map(self, soup):
         categories_tag = soup.find("ul", {"class": "nav nav-tabs products"})
@@ -106,12 +96,6 @@ class Uni:
                 ]
 
         return df
-
-    def save_csv(self):
-        df = self.get_product_df()
-        csv_path = os.path.join(self.data_dir, "Uni_product.csv")
-        df.to_csv(csv_path, index=False, encoding="utf-8-sig")
-        print(f"Saved: {csv_path}")
 
 
 if __name__ == "__main__":
