@@ -1,12 +1,15 @@
 import os
+import json
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
 
 class KC:
-    def __init__(self, data_dir="data"):
+    def __init__(self, data_dir="data", config_path="mapping.json"):
         self.data_dir = data_dir
+        self.config = self.get_config(config_path)
+
         self.base_url = "https://www.kuangchuan.com"
         self.brand_url = f"{self.base_url}/Product"
         self.setup()
@@ -19,6 +22,10 @@ class KC:
         # pd.set_option('display.max_rows', None)
         pd.set_option("display.max_columns", None)
         pd.set_option("display.max_colwidth", None)
+
+    def get_config(self, config_path):
+        with open(config_path) as f:
+            return json.load(f)
 
     def get_brand_df(self):
         df = pd.DataFrame(columns=["品牌", "URL"])
@@ -36,23 +43,56 @@ class KC:
 
         return df
 
+    def clean_text(self, text):
+        text = (
+            text.replace("\n", "").replace("\r", "").replace("\t", "").replace(" ", "")
+        )
+
+        return text
+
+    def mapping(self, name, mapping_type):
+        if not name:
+            return ""
+
+        for keyword in self.config[mapping_type]:
+            if keyword in name:
+                return self.config[mapping_type][keyword]
+
+        return ""
+
     def get_product_df(self):
         df = pd.DataFrame(columns=self.columns)
         brand_df = self.get_brand_df()
-        print(brand_df)
 
         for idx, row in brand_df.iterrows():
             url = row["URL"]
             print(f"URL: {url}")
             response = requests.get(url)
             soup = BeautifulSoup(response.text, "html.parser")
+            products_tag = soup.find("div", {"class": "kc-product-items"})
+            product_tags = products_tag.find_all(
+                "div", {"class": "col-6 col-lg-3 col-md-4"}
+            )
 
-            products_tag = soup.find("div", {"class": "kc-product-box pt-3"})
-            print(products_tag)
-            # {TODO}
-            exit()
+            for product_tag in product_tags:
+                name = product_tag.find("h1").text
+                details = product_tag.find_all("div", {"class": "mb-3"})
+                # detail = "\n".join([self.clean_text(detail.text) for detail in details])
+                spec = self.clean_text(details[1].text).replace("容量：", "")
 
-        return product_df
+                subcategory = self.mapping(name, "product2subcategory")
+                category = self.mapping(name, "subcategory2category")
+
+                df.loc[len(df)] = [
+                    category,
+                    subcategory,
+                    "光泉",
+                    row["品牌"],
+                    name,
+                    spec,  # detail,
+                ]
+
+        return df
 
     def save_csv(self):
         df = self.get_product_df()

@@ -9,12 +9,14 @@ if __name__ == "__main__":
     wc = WC()
     uni = Uni()
     imei = Imei()
+    kc = KC()
 
     df = pd.concat(
         [
             wc.get_product_df(),
             uni.get_product_df(),
             imei.get_product_df(),
+            kc.get_product_df(),
         ],
         axis=0,
     )
