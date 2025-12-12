@@ -14,6 +14,8 @@ class Company:
 
         self.columns = ["類別", "子類別", "公司", "品牌", "產品", "規格"]
 
+        self.db = None
+
         self.db_columns = [
             # "ID",  # Primary key
             "CRAWLER_NAME",
@@ -92,3 +94,17 @@ class Company:
         df = pd.DataFrame(keywords)
         df.to_csv("data/keywords.csv", index=False, encoding="utf-8-sig")
         print(f"Saved: data/keywords.csv")
+
+    def insert_product(self):
+        rows = self.get_rows()
+        table_name = self.config["db_table_name"]
+
+        sql = f"""
+            INSERT INTO {table_name} ({', '.join(self.db_columns)})
+            VALUES ({', '.join(['%s'] * len(self.db_columns))})
+        """
+
+        print(sql)
+
+        self.db.cursor.executemany(sql, rows)
+        self.db.conn.commit()

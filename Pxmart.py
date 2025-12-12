@@ -1,4 +1,5 @@
 from Company import Company
+from SQLClient import SQLClient
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -27,6 +28,14 @@ class Pxmart(Company):
             "PROMO",
             "REQUEST_URL",
         ]
+
+        self.db = SQLClient(
+            server=self.config["db"]["server"],
+            database=self.config["db"]["database"],
+            user=self.config["db"]["user"],
+            password=self.config["db"]["password"],
+            port=self.config["db"]["port"],
+        )
 
     def get_product_df(self):
         df = pd.DataFrame(columns=self.columns)
@@ -87,11 +96,37 @@ class Pxmart(Company):
                     df.loc[idx, "PRODUCT_NAME"], df.loc[idx, "SPEC"] = m.groups()
 
         # 取出價格數字
-        # df["PRICE"] = df["PRICE"].apply(self.get_int)
+        df["PRICE"] = df["PRICE"].apply(self.get_int)
 
         return df
+
+    def get_rows(self):
+        df = self.get_product_df()
+
+        # 刪除不要的產品
+        df = df.loc[df["CATEGORY"] != ""]
+
+        # 轉成 db 欄位
+        df = df.reindex(columns=self.db_columns)
+
+        # 補欄位
+        df["CRAWLER_NAME"] = self.__class__.__name__ + ".py"
+        df["SOURCE"] = "爬蟲"
+        df["RETAILER"] = "WebCrawler_Pxmart"
+        df["NEW"] = 0
+        df["STATUS"] = ""
+
+        # df 轉可 executemany 的格式
+        rows = list(df.itertuples(index=False, name=None))
+
+        # 處理空值
+        rows = [tuple(None if pd.isna(x) else x for x in row) for row in rows]
+        print(rows[0])
+
+        return rows
 
 
 if __name__ == "__main__":
     pxmart = Pxmart()
-    pxmart.save_csv()
+    # pxmart.save_csv()
+    pxmart.insert_product()
