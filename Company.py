@@ -9,7 +9,8 @@ import re
 class Company:
     def __init__(self, data_dir="data", config_path="mapping.json"):
         self.data_dir = data_dir
-        self.config = self.get_config(config_path)
+        self.config_path = config_path
+        self.config = self.get_config()
         self.setup()
 
         self.columns = ["類別", "子類別", "公司", "品牌", "產品", "規格"]
@@ -42,9 +43,15 @@ class Company:
         pd.set_option("display.max_columns", None)
         pd.set_option("display.max_colwidth", None)
 
-    def get_config(self, config_path):
-        with open(config_path) as f:
+    def get_config(self):
+        with open(self.config_path) as f:
             return json.load(f)
+
+    def update_config(self):
+        with open(self.config_path, "w") as f:
+            json.dump(self.config, f, indent=4, ensure_ascii=False)
+
+        print(f"Updated: {self.config_path}")
 
     def clean_text(self, text):
         text = (

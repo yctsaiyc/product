@@ -100,6 +100,7 @@ class Carrefour(Company):
                 print(f"URL: {url}")
 
         df = self.process_product_df(df)
+        self.update_config()
 
         return df
 
@@ -112,10 +113,17 @@ class Carrefour(Company):
                 brand = next(iter(b2m.keys()))
 
                 if brand != data_brand:
-                    print(f"---------- {data_brand} -> {brand}")
+                    print(f"{data_brand} -> {brand}")
 
                 manufacturer = b2m[brand]
                 return brand, manufacturer
+
+        if data_brand:
+            self.config["product2brand2manufacturer"][data_brand] = {
+                data_brand: data_brand
+            }
+
+            return data_brand, data_brand
 
         return "", ""
 
