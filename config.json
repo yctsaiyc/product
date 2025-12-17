@@ -1,4 +1,12 @@
 {
+    "db": {
+        "server": "",
+        "database": "",
+        "user": "",
+        "password": "",
+        "port": ""
+    },
+    "db_table_name": "WC_AI_CWL_PRODUCTS_LITE",
     "product2category": {
         "湯圓": "",
         "玉米包": "",
