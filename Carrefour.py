@@ -100,6 +100,7 @@ class Carrefour(Company):
                 print(f"URL: {url}")
 
         df = self.process_product_df(df)
+        df = self.filter_product_df(df)
         self.update_config()
 
         return df
@@ -109,7 +110,7 @@ class Carrefour(Company):
             return "", ""
 
         for keyword, b2m in self.config["product2brand2manufacturer"].items():
-            if keyword in data_brand:
+            if keyword in data_brand or keyword in data_name:
                 brand = next(iter(b2m.keys()))
 
                 if brand != data_brand:
@@ -150,6 +151,12 @@ class Carrefour(Company):
             .values
         )
 
+        return df
+
+    def filter_product_df(self, df):
+        # 刪除不要的產品
+        df = df.loc[df["CATEGORY"] != ""]
+        df = df.loc[df["BRAND"] != ""]
         return df
 
     def get_rows(self):
