@@ -86,6 +86,16 @@ class Company:
 
         return "", ""
 
+    def to_db_schema(self, df):
+        # 轉成 db 欄位
+        df = df.reindex(columns=self.db_columns)
+
+        # 補欄位
+        df["CRAWLER_NAME"] = self.__class__.__name__ + ".py"
+        df["SOURCE"] = "爬蟲"
+        df["RETAILER"] = "WebCrawler_" + self.__class__.__name__
+        df["STATUS"] = ""
+
     def save_csv(self):
         df = self.get_product_df()
         csv_path = os.path.join(self.data_dir, f"{self.__class__.__name__}_product.csv")
