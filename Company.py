@@ -86,6 +86,12 @@ class Company:
 
         return "", ""
 
+    def filter_product_df(self, df):
+        # 刪除不要的產品
+        df = df.loc[df["CATEGORY"] != ""]
+        df = df.loc[df["BRAND"] != ""]
+        return df
+
     def to_db_schema(self, df):
         # 轉成 db 欄位
         df = df.reindex(columns=self.db_columns)
@@ -95,6 +101,20 @@ class Company:
         df["SOURCE"] = "爬蟲"
         df["RETAILER"] = "WebCrawler_" + self.__class__.__name__
         df["STATUS"] = ""
+
+        return df
+
+    def get_rows(self):
+        df = self.get_product_df()
+
+        # df 轉可 executemany 的格式
+        rows = list(df.itertuples(index=False, name=None))
+
+        # 處理空值
+        rows = [tuple(None if pd.isna(x) else x for x in row) for row in rows]
+        print(rows[0])
+
+        return rows
 
     def save_csv(self):
         df = self.get_product_df()
@@ -125,3 +145,11 @@ class Company:
 
         self.db.cursor.executemany(sql, rows)
         self.db.conn.commit()
+
+    def get_url_set(self):
+        table_name = self.config["db_table_name"]
+        table = self.db.select_all(table_name)
+        df = pd.DataFrame(table)
+        url_set = set(df["REQUEST_URL"])
+
+        return url_set
