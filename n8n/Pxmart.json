@@ -1,0 +1,171 @@
+{
+  "name": "Pxmart",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "20404fd0-e919-49bf-a4b9-3a05adc2d46c",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://www.pxmart.com.tw/campaign/life-will/classification/冷藏、冰凍食品",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        224,
+        0
+      ],
+      "id": "51f0685f-d633-4dbf-845c-51a18d31fd75",
+      "name": "取得 html"
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "data",
+              "cssSelector": ".Card_card-container__OxmEq.Card_card-container--product__Q_BJW",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "6f06c2da-9bfa-4d5f-bd35-7c687f2191ac",
+      "name": "取出產品 tag"
+    },
+    {
+      "parameters": {
+        "options": {
+          "fileName": "n8n_test.csv"
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        0
+      ],
+      "id": "b8d2210b-0a15-4c03-887e-fb113f0f2254",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "language": "pythonNative",
+        "pythonCode": "products = []\n\nfor product in _items[0][\"json\"][\"data\"]:\n  split = product.split(\"\\n\\n\")\n  name = split[0]\n\n  # 價格 (兩件特價則取平均)\n  price = split[-1]\n\n  # 規格\n  spec = name.split(\"(\", 1)[1]\n\n  if \"(\" in spec:\n    # 多個括號\n    spec = \"(\" + spec\n\n  else:\n    spec = spec[:-1]\n    \n  products.append({\n      \"name\": name,\n      \"price\": price,\n      \"spec\": spec,\n      # \"splilt\": split,\n  })\n  \nreturn products"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        0
+      ],
+      "id": "8d66dbfa-9267-4bfb-90fb-2379ae99255e",
+      "name": "分離欄位"
+    },
+    {
+      "parameters": {
+        "language": "pythonNative",
+        "pythonCode": "data = []\n\nfor item in _items:\n  json = item[\"json\"]\n  data.append({\n    \"CATEGORY\": \"\",\n    \"MANUFACTURER\": \"\",\n    \"BRAND\": \"\",\n    \"PRODUCT_NAME\": json.get(\"name\"),\n    \"SPEC\": json.get(\"spec\"),\n    \"PRICE\": json.get(\"price\"),\n    \"PROMO\": \"\",\n    \"REQUEST_URL\": \"\",\n  })\n\nreturn data"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        896,
+        0
+      ],
+      "id": "495f57f5-307f-4a1f-b06d-1f4f974ea504",
+      "name": "轉成 db 欄位"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "取得 html",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "取得 html": {
+      "main": [
+        [
+          {
+            "node": "取出產品 tag",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "取出產品 tag": {
+      "main": [
+        [
+          {
+            "node": "分離欄位",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "分離欄位": {
+      "main": [
+        [
+          {
+            "node": "轉成 db 欄位",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        []
+      ]
+    },
+    "轉成 db 欄位": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "11f961b1-e810-433f-90a2-02d307eaf8f5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "26b01562f9767bdebc818b6b2ba158d86d29098ccd35229feef174e8f1c0297d"
+  },
+  "id": "lTKqRWqfB51x4JSciG3Hr",
+  "tags": []
+}
