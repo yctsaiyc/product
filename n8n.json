@@ -19,7 +19,7 @@
       "typeVersion": 1.2,
       "position": [
         544,
-        -616
+        -632
       ],
       "id": "6f06c2da-9bfa-4d5f-bd35-7c687f2191ac",
       "name": "取出產品 tag"
@@ -33,7 +33,7 @@
       "typeVersion": 2,
       "position": [
         992,
-        -688
+        -704
       ],
       "id": "8d66dbfa-9267-4bfb-90fb-2379ae99255e",
       "name": "分離欄位"
@@ -47,7 +47,7 @@
       "typeVersion": 2,
       "position": [
         1216,
-        -688
+        -704
       ],
       "id": "495f57f5-307f-4a1f-b06d-1f4f974ea504",
       "name": "轉成 db 欄位"
@@ -66,7 +66,7 @@
       "typeVersion": 1.3,
       "position": [
         -352,
-        296
+        280
       ],
       "id": "06e3bb2f-e27d-4b7e-b4c0-35cd9ee64074",
       "name": "Schedule Trigger"
@@ -80,7 +80,7 @@
       "typeVersion": 4.3,
       "position": [
         320,
-        -616
+        -632
       ],
       "id": "b75a3dd5-c3ca-49ae-a21f-6b20445119f3",
       "name": "HTTP Request"
@@ -95,7 +95,7 @@
       "typeVersion": 3.2,
       "position": [
         768,
-        -688
+        -704
       ],
       "id": "a627ff2a-c82b-460d-b49d-4bb11c2c7c87",
       "name": "Merge"
@@ -109,7 +109,7 @@
       "typeVersion": 2,
       "position": [
         96,
-        -688
+        -704
       ],
       "id": "e0584432-8757-4f37-864a-d56ad79e88e8",
       "name": "全聯"
@@ -123,7 +123,7 @@
       "typeVersion": 2,
       "position": [
         1664,
-        -496
+        16
       ],
       "id": "d5174320-fa2a-4880-b4e4-37a9d3ba4441",
       "name": "填補類別、品牌、製造商"
@@ -137,7 +137,7 @@
       "typeVersion": 2,
       "position": [
         -128,
-        -304
+        -320
       ],
       "id": "7dc2b268-51a3-444d-a8be-cf6982e61423",
       "name": "家樂福"
@@ -151,7 +151,7 @@
       "typeVersion": 2,
       "position": [
         -128,
-        -112
+        -128
       ],
       "id": "02e7945c-e993-45ea-b440-e017f7b324b4",
       "name": "愛買樂天",
@@ -166,7 +166,7 @@
       "typeVersion": 2,
       "position": [
         -128,
-        272
+        256
       ],
       "id": "e3a3ad85-0438-436b-85a5-1df5eb2a0583",
       "name": "美廉社"
@@ -180,7 +180,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        272
+        256
       ],
       "id": "8fa870a7-07ec-48b6-8d37-33fb83f14b8d",
       "name": "HTTP Request1"
@@ -210,7 +210,7 @@
       "typeVersion": 1.2,
       "position": [
         320,
-        272
+        256
       ],
       "id": "98d9af34-cde7-4c05-822f-d0ebd4f51b8c",
       "name": "HTML"
@@ -224,7 +224,7 @@
       "typeVersion": 2,
       "position": [
         544,
-        272
+        256
       ],
       "id": "b97c9e90-cc55-4bd7-8c84-4551c5ab6a9c",
       "name": "Code in Python (Native)"
@@ -238,7 +238,7 @@
       "typeVersion": 2,
       "position": [
         1216,
-        416
+        400
       ],
       "id": "05f46775-c5ae-4d14-82b6-58fbd7f2fce2",
       "name": "Mapping"
@@ -252,7 +252,7 @@
       "typeVersion": 2,
       "position": [
         -128,
-        680
+        664
       ],
       "id": "17c4f53e-2dde-497a-a19b-a7c2ae25735d",
       "name": "PChome"
@@ -266,7 +266,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        680
+        664
       ],
       "id": "d17b963a-6535-4729-b7f4-f8b6e9010dc6",
       "name": "HTTP Request2"
@@ -280,7 +280,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        80
+        64
       ],
       "id": "29acbb3f-cd8e-4a98-bfb8-5b67fd796b42",
       "name": "HTTP Request3",
@@ -295,7 +295,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        -112
+        -128
       ],
       "id": "a1b5811c-4802-4427-9f30-f77a733feb4a",
       "name": "HTTP Request4",
@@ -319,7 +319,7 @@
       "typeVersion": 1.2,
       "position": [
         320,
-        560
+        544
       ],
       "id": "65720787-f78c-41c5-9488-abb25ffe6d8a",
       "name": "品名、規格"
@@ -333,7 +333,7 @@
       "typeVersion": 1,
       "position": [
         544,
-        560
+        544
       ],
       "id": "c8acc305-145b-4a26-86c1-4ec735b2de3a",
       "name": "Split Out"
@@ -347,7 +347,7 @@
       "typeVersion": 1,
       "position": [
         544,
-        752
+        736
       ],
       "id": "7e831589-9a34-4b23-b076-7691786f13d1",
       "name": "Split Out1"
@@ -362,7 +362,7 @@
       "typeVersion": 3.2,
       "position": [
         768,
-        680
+        664
       ],
       "id": "581e27ea-50e0-4cbe-a4c1-a51c4c47c562",
       "name": "Merge3"
@@ -376,7 +376,7 @@
       "typeVersion": 2,
       "position": [
         992,
-        680
+        664
       ],
       "id": "de5ab94c-a1cd-436f-835c-9b9d0ec8c2e8",
       "name": "Code in Python (Native)2"
@@ -401,7 +401,7 @@
       "typeVersion": 1.2,
       "position": [
         320,
-        752
+        736
       ],
       "id": "f5c29819-9dea-42de-85ba-3d8b9b163f93",
       "name": "URL"
@@ -414,7 +414,7 @@
       "typeVersion": 3.2,
       "position": [
         1440,
-        -512
+        -552
       ],
       "id": "6b566594-b877-4398-b834-3dd6b1c8d382",
       "name": "合併 mapping、data"
@@ -428,7 +428,7 @@
       "typeVersion": 1.1,
       "position": [
         2112,
-        -520
+        -80
       ],
       "id": "98c851c5-dd04-4125-b338-0c387bac3128",
       "name": "存入資料庫",
@@ -458,7 +458,7 @@
       "typeVersion": 1.2,
       "position": [
         320,
-        80
+        64
       ],
       "id": "aa1875c9-a980-4542-b3d6-994974e94154",
       "name": "HTML1",
@@ -473,7 +473,7 @@
       "typeVersion": 4.3,
       "position": [
         320,
-        1232
+        1216
       ],
       "id": "cd14f301-ac7d-4bad-9f60-c1ce1b5b8189",
       "name": "HTTP Request7"
@@ -497,7 +497,7 @@
       "typeVersion": 1.2,
       "position": [
         96,
-        1208
+        1192
       ],
       "id": "4dc7a9c6-a62d-4eb9-a6ad-df0a2ae07ddf",
       "name": "取得雲端 PDF URL"
@@ -521,7 +521,7 @@
       "typeVersion": 1.2,
       "position": [
         544,
-        1232
+        1216
       ],
       "id": "311f85b0-a623-4fab-a5f8-9e9866c14602",
       "name": "取得 PDF name"
@@ -536,7 +536,7 @@
       "typeVersion": 3.2,
       "position": [
         768,
-        1208
+        1192
       ],
       "id": "f6b98942-13b0-4619-bdb8-f742411026e8",
       "name": "Merge1"
@@ -550,7 +550,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        944
+        928
       ],
       "id": "c764328f-95d2-4bfe-927f-c5653c621d84",
       "name": "家樂福 DM"
@@ -564,7 +564,7 @@
       "typeVersion": 4.3,
       "position": [
         -128,
-        1208
+        1192
       ],
       "id": "6d94703c-daa8-4402-9f33-73e8280b1009",
       "name": "愛買 DM"
@@ -578,7 +578,7 @@
       "typeVersion": 2,
       "position": [
         320,
-        944
+        928
       ],
       "id": "c50912b8-0dc3-47b4-aa47-0b3bdeded37c",
       "name": "Code in Python (Native)3"
@@ -592,7 +592,7 @@
       "typeVersion": 4.3,
       "position": [
         544,
-        944
+        928
       ],
       "id": "182103b0-0dfc-496f-843c-159b140e325e",
       "name": "HTTP Request6"
@@ -603,7 +603,7 @@
       "typeVersion": 3.2,
       "position": [
         992,
-        1112
+        1096
       ],
       "id": "1ca249cf-2976-47cd-b136-5a00b4114d58",
       "name": "合併 DM"
@@ -632,7 +632,7 @@
       "typeVersion": 3.4,
       "position": [
         768,
-        944
+        928
       ],
       "id": "f9d1de4b-672b-4dce-99d0-957ca1ed88fe",
       "name": "取出 name、url"
@@ -646,7 +646,7 @@
       "typeVersion": 2,
       "position": [
         1216,
-        -472
+        -488
       ],
       "id": "9709bad2-efee-4016-8c21-02119e2d3edc",
       "name": "轉成 db 欄位1"
@@ -660,7 +660,7 @@
       "typeVersion": 2,
       "position": [
         -128,
-        80
+        64
       ],
       "id": "14f74fee-5c26-4006-8b41-a545c8f96558",
       "name": "Momo",
@@ -675,7 +675,7 @@
       "typeVersion": 2,
       "position": [
         544,
-        80
+        64
       ],
       "id": "5759209f-f2be-45bc-af73-a8a16aa9ae20",
       "name": "Code in Python (Native)1",
@@ -710,7 +710,7 @@
       "typeVersion": 2.3,
       "position": [
         1888,
-        -496
+        16
       ],
       "id": "1a20ce90-4955-43ed-bcc5-04b728313549",
       "name": "判斷資料是否要留"
@@ -725,7 +725,7 @@
       "typeVersion": 1.1,
       "position": [
         2112,
-        -328
+        112
       ],
       "id": "b8d2210b-0a15-4c03-887e-fb113f0f2254",
       "name": "不要的資料存 csv",
@@ -750,7 +750,7 @@
       "typeVersion": 1.2,
       "position": [
         320,
-        -304
+        -320
       ],
       "id": "20d5b689-3c0c-412c-8bd1-2f53970d4ff1",
       "name": "取得第一頁內容 url，避免 memory 過載"
@@ -764,7 +764,7 @@
       "typeVersion": 4.3,
       "position": [
         544,
-        -304
+        -320
       ],
       "id": "ae6eb1ca-6b08-4614-9777-7259dbfc4ce6",
       "name": "取得頁面內容"
@@ -798,10 +798,11 @@
       "typeVersion": 2.3,
       "position": [
         992,
-        -280
+        -296
       ],
       "id": "6f840651-7adb-444d-917d-45f7f71b7830",
-      "name": "檢查有無下一頁"
+      "name": "檢查有無下一頁",
+      "disabled": true
     },
     {
       "parameters": {
@@ -813,10 +814,11 @@
       "typeVersion": 2,
       "position": [
         1216,
-        -208
+        -224
       ],
       "id": "61fc3b58-395d-4be0-b8e1-48606731d780",
-      "name": "有下一頁，取 url"
+      "name": "有下一頁，取 url",
+      "disabled": true
     },
     {
       "parameters": {
@@ -857,7 +859,7 @@
       "typeVersion": 1.2,
       "position": [
         768,
-        -472
+        -488
       ],
       "id": "3cf6a64f-78d2-4d6b-9d5c-4bc98512fd57",
       "name": "取要的欄位"
@@ -871,7 +873,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        -304
+        -320
       ],
       "id": "578a3b97-5120-4ec0-9400-daf9ba1fc77c",
       "name": "取整頁 (資料大)"
@@ -901,21 +903,22 @@
       "typeVersion": 1.2,
       "position": [
         768,
-        -280
+        -296
       ],
       "id": "8e14cf6c-b9b2-433a-99de-b4b669af22f3",
-      "name": "取下一頁"
+      "name": "取下一頁",
+      "disabled": true
     },
     {
       "parameters": {
         "language": "pythonNative",
-        "pythonCode": "base_url = \"https://online.carrefour.com.tw\"\n\n# 把 loop 的每一個 run 接起來\nif \"all_results\" not in globals():\n  globals()[\"all_results\"] = []\n\nfor item in _items:\n  names = item[\"json\"][\"name\"]\n  prices = item[\"json\"][\"price\"]\n  specs= item[\"json\"][\"spec\"]\n  urls = item[\"json\"][\"url\"]\n  \n  for name, price, spec, url in zip(names, prices, specs, urls):\n    # 刪除品名的備註\n    name = name.split(\"※實際到貨效\")[0]\n    name = name.split(\"到貨效期\")[0]\n    \n    # 價格取整數\n    price = int(''.join(filter(str.isdigit, price)))\n\n    # 組 url\n    url = base_url + url\n                        \n    result.append({\n      \"name\": name,\n      \"price\": price,\n      \"spec\": spec,  \n      \"url\": url,\n    })\n    \n  # 只有最後一頁回傳\n  if item[\"json\"].get(\"is_last_page\", False):\n    return [{\"json\": {\"all_data\": globals()[\"all_results\"]}}]\n  \n  else:\n    return []"
+        "pythonCode": "base_url = \"https://online.carrefour.com.tw\"\nresult = []\n\n\nfor item in _items:\n  names = item[\"json\"][\"name\"]\n  prices = item[\"json\"][\"price\"]\n  specs= item[\"json\"][\"spec\"]\n  urls = item[\"json\"][\"url\"]\n  \n  for name, price, spec, url in zip(names, prices, specs, urls):\n    # 刪除品名的備註\n    name = name.split(\"※實際到貨效\")[0]\n    name = name.split(\"到貨效期\")[0]\n    \n    # 價格取整數\n    price = int(''.join(filter(str.isdigit, price)))\n\n    # 組 url\n    url = base_url + url\n                        \n    result.append({\n      \"name\": name,\n      \"price\": price,\n      \"spec\": spec,  \n      \"url\": url,\n    })\n    \nreturn result"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
         992,
-        -472
+        -488
       ],
       "id": "c17ff087-433e-4ef6-b227-0e9e7dc57b05",
       "name": "拉平"
@@ -1099,6 +1102,11 @@
         [
           {
             "node": "合併 mapping、data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "填補類別、品牌、製造商",
             "type": "main",
             "index": 0
           }
@@ -1421,12 +1429,12 @@
       "main": [
         [
           {
-            "node": "取下一頁",
+            "node": "取要的欄位",
             "type": "main",
             "index": 0
           },
           {
-            "node": "取要的欄位",
+            "node": "取下一頁",
             "type": "main",
             "index": 0
           }
@@ -1508,7 +1516,7 @@
     "timezone": "Asia/Taipei",
     "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "ed35011c-a5f6-4de1-a3c9-5811cd2caf29",
+  "versionId": "26b94782-c85e-4efd-9104-973007f7c9d1",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "26b01562f9767bdebc818b6b2ba158d86d29098ccd35229feef174e8f1c0297d"
