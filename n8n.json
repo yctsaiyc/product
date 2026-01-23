@@ -18,8 +18,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        544,
-        -744
+        992,
+        -1184
       ],
       "id": "6f06c2da-9bfa-4d5f-bd35-7c687f2191ac",
       "name": "取出產品 tag"
@@ -32,8 +32,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        992,
-        -880
+        1440,
+        -1160
       ],
       "id": "8d66dbfa-9267-4bfb-90fb-2379ae99255e",
       "name": "分離欄位"
@@ -46,8 +46,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        -880
+        1664,
+        -1160
       ],
       "id": "495f57f5-307f-4a1f-b06d-1f4f974ea504",
       "name": "轉成 db 欄位"
@@ -66,7 +66,7 @@
       "typeVersion": 1.3,
       "position": [
         -352,
-        -40
+        -280
       ],
       "id": "06e3bb2f-e27d-4b7e-b4c0-35cd9ee64074",
       "name": "Schedule Trigger"
@@ -79,8 +79,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        320,
-        -744
+        768,
+        -1184
       ],
       "id": "b75a3dd5-c3ca-49ae-a21f-6b20445119f3",
       "name": "HTTP Request"
@@ -94,8 +94,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        768,
-        -880
+        1216,
+        -1160
       ],
       "id": "a627ff2a-c82b-460d-b49d-4bb11c2c7c87",
       "name": "Merge"
@@ -108,8 +108,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        96,
-        -880
+        544,
+        -1160
       ],
       "id": "e0584432-8757-4f37-864a-d56ad79e88e8",
       "name": "全聯"
@@ -122,8 +122,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
-        24
+        2112,
+        -376
       ],
       "id": "d5174320-fa2a-4880-b4e4-37a9d3ba4441",
       "name": "填補類別、品牌、製造商"
@@ -136,8 +136,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -128,
-        -552
+        320,
+        -896
       ],
       "id": "7dc2b268-51a3-444d-a8be-cf6982e61423",
       "name": "家樂福"
@@ -150,8 +150,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        96,
-        -168
+        544,
+        -704
       ],
       "id": "02e7945c-e993-45ea-b440-e017f7b324b4",
       "name": "愛買樂天"
@@ -164,8 +164,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        544,
-        -360
+        992,
+        -88
       ],
       "id": "e3a3ad85-0438-436b-85a5-1df5eb2a0583",
       "name": "美廉社"
@@ -178,8 +178,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        768,
-        -360
+        1216,
+        -88
       ],
       "id": "8fa870a7-07ec-48b6-8d37-33fb83f14b8d",
       "name": "HTTP Request1"
@@ -208,8 +208,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        992,
-        -360
+        1440,
+        -88
       ],
       "id": "98d9af34-cde7-4c05-822f-d0ebd4f51b8c",
       "name": "HTML"
@@ -222,8 +222,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        -360
+        1664,
+        -88
       ],
       "id": "b97c9e90-cc55-4bd7-8c84-4551c5ab6a9c",
       "name": "Code in Python (Native)"
@@ -236,8 +236,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        216
+        1664,
+        -280
       ],
       "id": "05f46775-c5ae-4d14-82b6-58fbd7f2fce2",
       "name": "Mapping"
@@ -245,13 +245,13 @@
     {
       "parameters": {
         "language": "pythonNative",
-        "pythonCode": "return {\"url\": \"https://24h.pchome.com.tw/search/?q=%E9%AE%AE%E4%B9%B3&p=1\"}"
+        "pythonCode": "base_url = \"https://ecshweb.pchome.com.tw/search/v4.3/all/results?cateid=\"\nparams = \"&sort=hot%2Fdc&page=1&pageCount=100\"\n\ncodes = [\n  # 年貨大街\n  # 冷凍食品\n  # 熟食/小吃\n  # 水果/蔬菜\n  # 海鮮/肉品\n  # 蛋糕甜點\n  # \"DBAR\",\n  # 零食/餅乾\n  # 進口零食\n  # 進口飲料\n  \"DBAJ\",\n  # 飲料\n  # \"DBAB\",\n  # 礦泉水\n  # \"DBAG\",\n  # 咖啡/濾掛\n  # 沖泡/蜂蜜\n  # 茶葉/茶包\n  # 奶粉/副食品\n  # 米/食材\n  # 泡麵\n  # 油品\n  # \"DBBR\",\n  # 罐頭/醬料\n  # \"DBAI\",\n  # 票券\n]\n\nreturn [{\"url\": base_url + code + params} for code in codes]"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        96,
-        480
+        -128,
+        128
       ],
       "id": "17c4f53e-2dde-497a-a19b-a7c2ae25735d",
       "name": "PChome"
@@ -264,22 +264,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        320,
-        480
-      ],
-      "id": "d17b963a-6535-4729-b7f4-f8b6e9010dc6",
-      "name": "HTTP Request2"
-    },
-    {
-      "parameters": {
-        "url": "={{ $json.url }}",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3,
-      "position": [
-        96,
-        24
+        544,
+        -512
       ],
       "id": "29acbb3f-cd8e-4a98-bfb8-5b67fd796b42",
       "name": "HTTP Request3"
@@ -292,116 +278,11 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        320,
-        -168
+        768,
+        -704
       ],
       "id": "a1b5811c-4802-4427-9f30-f77a733feb4a",
       "name": "HTTP Request4"
-    },
-    {
-      "parameters": {
-        "operation": "extractHtmlContent",
-        "extractionValues": {
-          "values": [
-            {
-              "key": "name",
-              "cssSelector": ".c-prodInfoV2__infoBox.c-prodInfoV2__infoBox--storeProdInfoCard .c-prodInfoV2__title",
-              "returnArray": true
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.html",
-      "typeVersion": 1.2,
-      "position": [
-        544,
-        384
-      ],
-      "id": "65720787-f78c-41c5-9488-abb25ffe6d8a",
-      "name": "品名、規格"
-    },
-    {
-      "parameters": {
-        "fieldToSplitOut": "name",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.splitOut",
-      "typeVersion": 1,
-      "position": [
-        768,
-        384
-      ],
-      "id": "c8acc305-145b-4a26-86c1-4ec735b2de3a",
-      "name": "Split Out"
-    },
-    {
-      "parameters": {
-        "fieldToSplitOut": "url",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.splitOut",
-      "typeVersion": 1,
-      "position": [
-        768,
-        576
-      ],
-      "id": "7e831589-9a34-4b23-b076-7691786f13d1",
-      "name": "Split Out1"
-    },
-    {
-      "parameters": {
-        "mode": "combine",
-        "combineBy": "combineByPosition",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3.2,
-      "position": [
-        992,
-        480
-      ],
-      "id": "581e27ea-50e0-4cbe-a4c1-a51c4c47c562",
-      "name": "Merge3"
-    },
-    {
-      "parameters": {
-        "language": "pythonNative",
-        "pythonCode": "base_url = \"https://24h.pchome.com.tw\"\nproducts = []\n\nfor product in _items:\n  product = product.get(\"json\")\n\n  products.append({\n    # \"ID\",  # Primary key\n    \"CRAWLER_NAME\": \"PChome\",\n    \"REQUEST_URL\": base_url + product.get(\"url\"),\n    \"SOURCE\": \"爬蟲\",\n    \"RETAILER\": \"WebCrawler_PChome\",\n    \"PRODUCT_NAME\": product.get(\"name\"),\n    \"CATEGORY\": \"\",\n    \"MANUFACTURER\": \"\",\n    \"BRAND\": \"\",\n    \"SPEC\": \"\",\n    \"PRICE\": None,\n    \"PROMO\": \"\",\n    \"NEW\": 0,\n    \"STATUS\": \"\",\n    # \"CREATE_DATE\",  # SQL 自動產生\n    # \"CREATE_USER_ID\",  # SQL 自動產生\n  })\n\nreturn products"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        1216,
-        480
-      ],
-      "id": "de5ab94c-a1cd-436f-835c-9b9d0ec8c2e8",
-      "name": "Code in Python (Native)2"
-    },
-    {
-      "parameters": {
-        "operation": "extractHtmlContent",
-        "extractionValues": {
-          "values": [
-            {
-              "key": "url",
-              "cssSelector": ".c-prodInfoV2__link.gtmClickV2",
-              "returnValue": "attribute",
-              "attribute": "href",
-              "returnArray": true
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.html",
-      "typeVersion": 1.2,
-      "position": [
-        544,
-        576
-      ],
-      "id": "f5c29819-9dea-42de-85ba-3d8b9b163f93",
-      "name": "URL"
     },
     {
       "parameters": {
@@ -410,8 +291,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        1440,
-        -248
+        1888,
+        -568
       ],
       "id": "6b566594-b877-4398-b834-3dd6b1c8d382",
       "name": "合併 mapping、data"
@@ -424,8 +305,8 @@
       "type": "n8n-nodes-base.microsoftSql",
       "typeVersion": 1.1,
       "position": [
-        2336,
-        -72
+        2784,
+        -472
       ],
       "id": "98c851c5-dd04-4125-b338-0c387bac3128",
       "name": "存入資料庫",
@@ -446,7 +327,7 @@
       "typeVersion": 4.3,
       "position": [
         320,
-        1080
+        704
       ],
       "id": "cd14f301-ac7d-4bad-9f60-c1ce1b5b8189",
       "name": "HTTP Request7"
@@ -470,7 +351,7 @@
       "typeVersion": 1.2,
       "position": [
         96,
-        1008
+        632
       ],
       "id": "4dc7a9c6-a62d-4eb9-a6ad-df0a2ae07ddf",
       "name": "取得雲端 PDF URL"
@@ -494,7 +375,7 @@
       "typeVersion": 1.2,
       "position": [
         544,
-        1080
+        704
       ],
       "id": "311f85b0-a623-4fab-a5f8-9e9866c14602",
       "name": "取得 PDF name"
@@ -509,7 +390,7 @@
       "typeVersion": 3.2,
       "position": [
         768,
-        1008
+        632
       ],
       "id": "f6b98942-13b0-4619-bdb8-f742411026e8",
       "name": "Merge1"
@@ -523,7 +404,7 @@
       "typeVersion": 4.3,
       "position": [
         96,
-        768
+        392
       ],
       "id": "c764328f-95d2-4bfe-927f-c5653c621d84",
       "name": "家樂福 DM"
@@ -537,7 +418,7 @@
       "typeVersion": 4.3,
       "position": [
         -128,
-        1008
+        632
       ],
       "id": "6d94703c-daa8-4402-9f33-73e8280b1009",
       "name": "愛買 DM"
@@ -551,7 +432,7 @@
       "typeVersion": 2,
       "position": [
         320,
-        768
+        392
       ],
       "id": "c50912b8-0dc3-47b4-aa47-0b3bdeded37c",
       "name": "Code in Python (Native)3"
@@ -565,7 +446,7 @@
       "typeVersion": 4.3,
       "position": [
         544,
-        768
+        392
       ],
       "id": "182103b0-0dfc-496f-843c-159b140e325e",
       "name": "HTTP Request6"
@@ -576,7 +457,7 @@
       "typeVersion": 3.2,
       "position": [
         992,
-        912
+        536
       ],
       "id": "1ca249cf-2976-47cd-b136-5a00b4114d58",
       "name": "合併 DM"
@@ -605,7 +486,7 @@
       "typeVersion": 3.4,
       "position": [
         768,
-        768
+        392
       ],
       "id": "f9d1de4b-672b-4dce-99d0-957ca1ed88fe",
       "name": "取出 name、url"
@@ -618,8 +499,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        -552
+        1664,
+        -896
       ],
       "id": "9709bad2-efee-4016-8c21-02119e2d3edc",
       "name": "轉成 db 欄位1"
@@ -632,8 +513,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -128,
-        24
+        320,
+        -512
       ],
       "id": "14f74fee-5c26-4006-8b41-a545c8f96558",
       "name": "Momo"
@@ -666,8 +547,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        1888,
-        24
+        2336,
+        -376
       ],
       "id": "1a20ce90-4955-43ed-bcc5-04b728313549",
       "name": "判斷資料是否要留"
@@ -681,8 +562,8 @@
       "type": "n8n-nodes-base.convertToFile",
       "typeVersion": 1.1,
       "position": [
-        2112,
-        120
+        2560,
+        -280
       ],
       "id": "b8d2210b-0a15-4c03-887e-fb113f0f2254",
       "name": "不要的資料存 csv",
@@ -696,8 +577,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        544,
-        -552
+        992,
+        -896
       ],
       "id": "ae6eb1ca-6b08-4614-9777-7259dbfc4ce6",
       "name": "取得頁面內容"
@@ -740,8 +621,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        768,
-        -552
+        1216,
+        -896
       ],
       "id": "3cf6a64f-78d2-4d6b-9d5c-4bc98512fd57",
       "name": "取要的欄位"
@@ -754,8 +635,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        992,
-        -552
+        1440,
+        -896
       ],
       "id": "c17ff087-433e-4ef6-b227-0e9e7dc57b05",
       "name": "拉平"
@@ -777,8 +658,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        544,
-        -168
+        992,
+        -704
       ],
       "id": "f54cab7d-6cc2-46f4-a690-35bacd09823f",
       "name": "取要的區塊"
@@ -817,8 +698,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        768,
-        -168
+        1216,
+        -704
       ],
       "id": "dbccc84c-3175-4d16-b3ec-1e9f3122094c",
       "name": "取要的欄位1"
@@ -831,8 +712,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        992,
-        -168
+        1440,
+        -704
       ],
       "id": "0f8e00aa-818d-410e-b2db-112e63319d1f",
       "name": "Code in Python (Native)4"
@@ -845,8 +726,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        -168
+        1664,
+        -704
       ],
       "id": "82116241-b25d-4926-a63b-11624ccdf6ba",
       "name": "轉成 db 欄位 (樂天愛買)"
@@ -868,8 +749,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        320,
-        24
+        768,
+        -512
       ],
       "id": "aa1875c9-a980-4542-b3d6-994974e94154",
       "name": "取 script"
@@ -882,8 +763,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        544,
-        24
+        992,
+        -512
       ],
       "id": "5759209f-f2be-45bc-af73-a8a16aa9ae20",
       "name": "清洗字串"
@@ -896,8 +777,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        768,
-        24
+        1216,
+        -512
       ],
       "id": "6e7db27d-7a7d-40cd-b736-36df8fae4fd1",
       "name": "分離商品"
@@ -910,8 +791,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        992,
-        24
+        1440,
+        -512
       ],
       "id": "17e6d8b4-5fab-4b32-9fef-1573cc08d588",
       "name": "轉 json"
@@ -924,8 +805,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        24
+        1664,
+        -512
       ],
       "id": "ed31df35-abf9-49ae-8e84-5800ed6e44a7",
       "name": "轉成 db 欄位(Momo)"
@@ -938,8 +819,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        320,
-        -552
+        768,
+        -896
       ],
       "id": "81b3488b-c00c-4fa9-8a16-daafc49a7df3",
       "name": "所有頁面 url"
@@ -952,25 +833,168 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        96,
-        -552
+        544,
+        -896
       ],
       "id": "578a3b97-5120-4ec0-9400-daf9ba1fc77c",
       "name": "取得第一頁內容"
     },
     {
       "parameters": {
-        "batchSize": 1000,
+        "batchSize": 10000,
         "options": {}
       },
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        2112,
-        -72
+        2560,
+        -472
       ],
       "id": "6d4ac691-6d51-4c22-9371-023f3b88bf62",
       "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        544,
+        128
+      ],
+      "id": "8ea61b85-9bbc-4b94-838d-7b80ce4d55e7",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d276a009-c46d-420d-864b-6ea6a4e1d456",
+              "name": "TotalPage",
+              "value": "={{ $json.TotalPage }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        320,
+        200
+      ],
+      "id": "3e988389-2187-4e82-b991-1bc0d2e62c3d",
+      "name": "回傳頁數"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        96,
+        200
+      ],
+      "id": "d17b963a-6535-4729-b7f4-f8b6e9010dc6",
+      "name": "找有幾頁"
+    },
+    {
+      "parameters": {
+        "language": "pythonNative",
+        "pythonCode": "data = []\n\nfor item in _items:\n  item = item[\"json\"]\n  url = item[\"url\"]\n  total_page = item[\"TotalPage\"]\n\n  data.extend(\n    [\n      {\"url\": url.replace(\"page=1\", f\"page={str(page)}\")}\n      for page in range(1, total_page + 1)\n    ]\n  )\n\nreturn [data[0]]"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        768,
+        128
+      ],
+      "id": "ce29f2b6-bcda-4b4b-9187-7e3e5b2527ee",
+      "name": "回傳所有 url"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        992,
+        128
+      ],
+      "id": "2cb34f5f-c865-4f11-9c22-dd1b5bfe9a8a",
+      "name": "取得所有頁面"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "Prods",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1216,
+        128
+      ],
+      "id": "1b876524-96ff-4f24-907e-55566fa7ec93",
+      "name": "取產品"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a78a179c-3357-4382-8c70-ef43c3de78e7",
+              "name": "name",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "32282fb1-b74c-4de4-887e-41b16b7b73d4",
+              "name": "price",
+              "value": "={{ $json.Price }}",
+              "type": "number"
+            },
+            {
+              "id": "b9d31456-2762-4121-b653-7eef5b19f3ed",
+              "name": "url",
+              "value": "=https://24h.pchome.com.tw/prod/{{ $json.Id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        128
+      ],
+      "id": "a2c380fe-e3f2-4471-a216-f3ecbdae9cb5",
+      "name": "取要的欄位2"
+    },
+    {
+      "parameters": {
+        "language": "pythonNative",
+        "pythonCode": "data = []\n\nfor item in _items:\n  item = item.get(\"json\")\n\n  data.append({\n    # \"ID\",  # Primary key\n    \"CRAWLER_NAME\": \"PChome\",\n    \"REQUEST_URL\": item.get(\"url\"),\n    \"SOURCE\": \"爬蟲\",\n    \"RETAILER\": \"WebCrawler_PChome\",\n    \"PRODUCT_NAME\": item.get(\"name\"),\n    \"CATEGORY\": \"\",\n    \"MANUFACTURER\": \"\",\n    \"BRAND\": \"\",\n    \"SPEC\": \"\",\n    \"PRICE\": item.get(\"price\"),\n    \"PROMO\": \"\",\n    \"NEW\": 0,\n    \"STATUS\": \"\",\n    # \"CREATE_DATE\",  # SQL 自動產生\n    # \"CREATE_USER_ID\",  # SQL 自動產生\n  })\n\nreturn data"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1664,
+        128
+      ],
+      "id": "de5ab94c-a1cd-436f-835c-9b9d0ec8c2e8",
+      "name": "轉成 db 欄位 (PChome)"
     }
   ],
   "pinData": {},
@@ -981,7 +1005,7 @@
           {
             "node": "Merge",
             "type": "main",
-            "index": 1
+            "index": 0
           }
         ]
       ]
@@ -1085,14 +1109,14 @@
       "main": [
         [
           {
-            "node": "Merge",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           },
           {
-            "node": "HTTP Request",
+            "node": "Merge",
             "type": "main",
-            "index": 0
+            "index": 1
           }
         ]
       ]
@@ -1172,23 +1196,12 @@
       "main": [
         [
           {
-            "node": "HTTP Request2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request2": {
-      "main": [
-        [
-          {
-            "node": "品名、規格",
+            "node": "找有幾頁",
             "type": "main",
             "index": 0
           },
           {
-            "node": "URL",
+            "node": "Merge2",
             "type": "main",
             "index": 0
           }
@@ -1211,72 +1224,6 @@
         [
           {
             "node": "取得第一頁內容",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "品名、規格": {
-      "main": [
-        [
-          {
-            "node": "Split Out",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Split Out": {
-      "main": [
-        [
-          {
-            "node": "Merge3",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Split Out1": {
-      "main": [
-        [
-          {
-            "node": "Merge3",
-            "type": "main",
-            "index": 1
-          }
-        ]
-      ]
-    },
-    "Merge3": {
-      "main": [
-        [
-          {
-            "node": "Code in Python (Native)2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Code in Python (Native)2": {
-      "main": [
-        [
-          {
-            "node": "合併 mapping、data",
-            "type": "main",
-            "index": 5
-          }
-        ]
-      ]
-    },
-    "URL": {
-      "main": [
-        [
-          {
-            "node": "Split Out1",
             "type": "main",
             "index": 0
           }
@@ -1641,6 +1588,94 @@
           }
         ]
       ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "回傳所有 url",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "回傳頁數": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "找有幾頁": {
+      "main": [
+        [
+          {
+            "node": "回傳頁數",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "回傳所有 url": {
+      "main": [
+        [
+          {
+            "node": "取得所有頁面",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "取得所有頁面": {
+      "main": [
+        [
+          {
+            "node": "取產品",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "取產品": {
+      "main": [
+        [
+          {
+            "node": "取要的欄位2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "取要的欄位2": {
+      "main": [
+        [
+          {
+            "node": "轉成 db 欄位 (PChome)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "轉成 db 欄位 (PChome)": {
+      "main": [
+        [
+          {
+            "node": "合併 mapping、data",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
     }
   },
   "active": true,
@@ -1651,7 +1686,7 @@
     "timezone": "Asia/Taipei",
     "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "4189d258-1744-49df-99af-67d32cff81b8",
+  "versionId": "2f5e1a4f-8ba7-4724-91f6-21070e7e4ee3",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "26b01562f9767bdebc818b6b2ba158d86d29098ccd35229feef174e8f1c0297d"
