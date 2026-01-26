@@ -18,7 +18,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        992,
+        272,
         -1184
       ],
       "id": "6f06c2da-9bfa-4d5f-bd35-7c687f2191ac",
@@ -32,8 +32,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1440,
-        -1160
+        720,
+        -1112
       ],
       "id": "8d66dbfa-9267-4bfb-90fb-2379ae99255e",
       "name": "分離欄位"
@@ -46,8 +46,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
-        -1160
+        944,
+        -1112
       ],
       "id": "495f57f5-307f-4a1f-b06d-1f4f974ea504",
       "name": "轉成 db 欄位"
@@ -65,8 +65,8 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3,
       "position": [
-        -352,
-        -280
+        -848,
+        -232
       ],
       "id": "06e3bb2f-e27d-4b7e-b4c0-35cd9ee64074",
       "name": "Schedule Trigger"
@@ -79,7 +79,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        768,
+        48,
         -1184
       ],
       "id": "b75a3dd5-c3ca-49ae-a21f-6b20445119f3",
@@ -94,8 +94,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        1216,
-        -1160
+        496,
+        -1112
       ],
       "id": "a627ff2a-c82b-460d-b49d-4bb11c2c7c87",
       "name": "Merge"
@@ -108,8 +108,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        544,
-        -1160
+        -176,
+        -1112
       ],
       "id": "e0584432-8757-4f37-864a-d56ad79e88e8",
       "name": "全聯"
@@ -122,7 +122,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2112,
+        1392,
         -376
       ],
       "id": "d5174320-fa2a-4880-b4e4-37a9d3ba4441",
@@ -136,8 +136,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        320,
-        -896
+        -400,
+        -872
       ],
       "id": "7dc2b268-51a3-444d-a8be-cf6982e61423",
       "name": "家樂福"
@@ -150,8 +150,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        544,
-        -704
+        -176,
+        -680
       ],
       "id": "02e7945c-e993-45ea-b440-e017f7b324b4",
       "name": "愛買樂天"
@@ -164,7 +164,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        992,
+        272,
         -88
       ],
       "id": "e3a3ad85-0438-436b-85a5-1df5eb2a0583",
@@ -178,7 +178,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        1216,
+        496,
         -88
       ],
       "id": "8fa870a7-07ec-48b6-8d37-33fb83f14b8d",
@@ -208,7 +208,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        1440,
+        720,
         -88
       ],
       "id": "98d9af34-cde7-4c05-822f-d0ebd4f51b8c",
@@ -222,7 +222,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
+        944,
         -88
       ],
       "id": "b97c9e90-cc55-4bd7-8c84-4551c5ab6a9c",
@@ -236,7 +236,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
+        944,
         -280
       ],
       "id": "05f46775-c5ae-4d14-82b6-58fbd7f2fce2",
@@ -250,8 +250,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -128,
-        128
+        -624,
+        176
       ],
       "id": "17c4f53e-2dde-497a-a19b-a7c2ae25735d",
       "name": "PChome"
@@ -264,8 +264,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        544,
-        -512
+        -176,
+        -488
       ],
       "id": "29acbb3f-cd8e-4a98-bfb8-5b67fd796b42",
       "name": "HTTP Request3"
@@ -278,8 +278,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        768,
-        -704
+        48,
+        -680
       ],
       "id": "a1b5811c-4802-4427-9f30-f77a733feb4a",
       "name": "HTTP Request4"
@@ -291,7 +291,7 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        1888,
+        1168,
         -568
       ],
       "id": "6b566594-b877-4398-b834-3dd6b1c8d382",
@@ -305,7 +305,7 @@
       "type": "n8n-nodes-base.microsoftSql",
       "typeVersion": 1.1,
       "position": [
-        2784,
+        2064,
         -472
       ],
       "id": "98c851c5-dd04-4125-b338-0c387bac3128",
@@ -326,8 +326,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        320,
-        704
+        -176,
+        752
       ],
       "id": "cd14f301-ac7d-4bad-9f60-c1ce1b5b8189",
       "name": "HTTP Request7"
@@ -350,8 +350,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        96,
-        632
+        -400,
+        680
       ],
       "id": "4dc7a9c6-a62d-4eb9-a6ad-df0a2ae07ddf",
       "name": "取得雲端 PDF URL"
@@ -374,8 +374,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        544,
-        704
+        48,
+        752
       ],
       "id": "311f85b0-a623-4fab-a5f8-9e9866c14602",
       "name": "取得 PDF name"
@@ -389,8 +389,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        768,
-        632
+        272,
+        680
       ],
       "id": "f6b98942-13b0-4619-bdb8-f742411026e8",
       "name": "Merge1"
@@ -403,8 +403,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        96,
-        392
+        -400,
+        440
       ],
       "id": "c764328f-95d2-4bfe-927f-c5653c621d84",
       "name": "家樂福 DM"
@@ -417,8 +417,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        -128,
-        632
+        -624,
+        680
       ],
       "id": "6d94703c-daa8-4402-9f33-73e8280b1009",
       "name": "愛買 DM"
@@ -431,8 +431,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        320,
-        392
+        -176,
+        440
       ],
       "id": "c50912b8-0dc3-47b4-aa47-0b3bdeded37c",
       "name": "Code in Python (Native)3"
@@ -445,8 +445,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        544,
-        392
+        48,
+        440
       ],
       "id": "182103b0-0dfc-496f-843c-159b140e325e",
       "name": "HTTP Request6"
@@ -456,8 +456,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        992,
-        536
+        496,
+        584
       ],
       "id": "1ca249cf-2976-47cd-b136-5a00b4114d58",
       "name": "合併 DM"
@@ -485,8 +485,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        768,
-        392
+        272,
+        440
       ],
       "id": "f9d1de4b-672b-4dce-99d0-957ca1ed88fe",
       "name": "取出 name、url"
@@ -499,8 +499,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
-        -896
+        944,
+        -872
       ],
       "id": "9709bad2-efee-4016-8c21-02119e2d3edc",
       "name": "轉成 db 欄位1"
@@ -513,8 +513,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        320,
-        -512
+        -400,
+        -488
       ],
       "id": "14f74fee-5c26-4006-8b41-a545c8f96558",
       "name": "Momo"
@@ -547,7 +547,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        2336,
+        1616,
         -376
       ],
       "id": "1a20ce90-4955-43ed-bcc5-04b728313549",
@@ -562,8 +562,8 @@
       "type": "n8n-nodes-base.convertToFile",
       "typeVersion": 1.1,
       "position": [
-        2560,
-        -280
+        1840,
+        -112
       ],
       "id": "b8d2210b-0a15-4c03-887e-fb113f0f2254",
       "name": "不要的資料存 csv",
@@ -577,8 +577,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        992,
-        -896
+        272,
+        -872
       ],
       "id": "ae6eb1ca-6b08-4614-9777-7259dbfc4ce6",
       "name": "取得頁面內容"
@@ -621,8 +621,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        1216,
-        -896
+        496,
+        -872
       ],
       "id": "3cf6a64f-78d2-4d6b-9d5c-4bc98512fd57",
       "name": "取要的欄位"
@@ -635,8 +635,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1440,
-        -896
+        720,
+        -872
       ],
       "id": "c17ff087-433e-4ef6-b227-0e9e7dc57b05",
       "name": "拉平"
@@ -658,8 +658,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        992,
-        -704
+        272,
+        -680
       ],
       "id": "f54cab7d-6cc2-46f4-a690-35bacd09823f",
       "name": "取要的區塊"
@@ -698,8 +698,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        1216,
-        -704
+        496,
+        -680
       ],
       "id": "dbccc84c-3175-4d16-b3ec-1e9f3122094c",
       "name": "取要的欄位1"
@@ -712,8 +712,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1440,
-        -704
+        720,
+        -680
       ],
       "id": "0f8e00aa-818d-410e-b2db-112e63319d1f",
       "name": "Code in Python (Native)4"
@@ -726,8 +726,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
-        -704
+        944,
+        -680
       ],
       "id": "82116241-b25d-4926-a63b-11624ccdf6ba",
       "name": "轉成 db 欄位 (樂天愛買)"
@@ -749,8 +749,8 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        768,
-        -512
+        48,
+        -488
       ],
       "id": "aa1875c9-a980-4542-b3d6-994974e94154",
       "name": "取 script"
@@ -763,8 +763,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        992,
-        -512
+        272,
+        -488
       ],
       "id": "5759209f-f2be-45bc-af73-a8a16aa9ae20",
       "name": "清洗字串"
@@ -777,8 +777,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1216,
-        -512
+        496,
+        -488
       ],
       "id": "6e7db27d-7a7d-40cd-b736-36df8fae4fd1",
       "name": "分離商品"
@@ -791,8 +791,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1440,
-        -512
+        720,
+        -488
       ],
       "id": "17e6d8b4-5fab-4b32-9fef-1573cc08d588",
       "name": "轉 json"
@@ -805,8 +805,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
-        -512
+        944,
+        -488
       ],
       "id": "ed31df35-abf9-49ae-8e84-5800ed6e44a7",
       "name": "轉成 db 欄位(Momo)"
@@ -819,8 +819,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        768,
-        -896
+        48,
+        -872
       ],
       "id": "81b3488b-c00c-4fa9-8a16-daafc49a7df3",
       "name": "所有頁面 url"
@@ -833,8 +833,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        544,
-        -896
+        -176,
+        -872
       ],
       "id": "578a3b97-5120-4ec0-9400-daf9ba1fc77c",
       "name": "取得第一頁內容"
@@ -847,7 +847,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        2560,
+        1840,
         -472
       ],
       "id": "6d4ac691-6d51-4c22-9371-023f3b88bf62",
@@ -862,8 +862,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        544,
-        128
+        48,
+        176
       ],
       "id": "8ea61b85-9bbc-4b94-838d-7b80ce4d55e7",
       "name": "Merge2"
@@ -885,8 +885,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        320,
-        200
+        -176,
+        248
       ],
       "id": "3e988389-2187-4e82-b991-1bc0d2e62c3d",
       "name": "回傳頁數"
@@ -899,8 +899,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        96,
-        200
+        -400,
+        248
       ],
       "id": "d17b963a-6535-4729-b7f4-f8b6e9010dc6",
       "name": "找有幾頁"
@@ -913,8 +913,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        768,
-        128
+        272,
+        176
       ],
       "id": "ce29f2b6-bcda-4b4b-9187-7e3e5b2527ee",
       "name": "回傳所有 url"
@@ -927,8 +927,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        992,
-        128
+        496,
+        176
       ],
       "id": "2cb34f5f-c865-4f11-9c22-dd1b5bfe9a8a",
       "name": "取得所有頁面"
@@ -941,8 +941,8 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        1216,
-        128
+        720,
+        176
       ],
       "id": "1b876524-96ff-4f24-907e-55566fa7ec93",
       "name": "取產品"
@@ -976,8 +976,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1440,
-        128
+        1168,
+        152
       ],
       "id": "a2c380fe-e3f2-4471-a216-f3ecbdae9cb5",
       "name": "取要的欄位2"
@@ -990,11 +990,105 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1664,
-        128
+        2288,
+        152
       ],
       "id": "de5ab94c-a1cd-436f-835c-9b9d0ec8c2e8",
       "name": "轉成 db 欄位 (PChome)"
+    },
+    {
+      "parameters": {
+        "batchSize": 5,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        944,
+        176
+      ],
+      "id": "196406f5-4bea-45eb-be38-70488fca42f3",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1392,
+        248
+      ],
+      "id": "a2ec7ace-d197-47e1-9ad1-9d2f5d6376d4",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2512,
+        224
+      ],
+      "id": "e58e034c-8f73-4d23-bf51-4219340b17e5",
+      "name": "避免 429",
+      "webhookId": "810046c4-3418-43b1-a470-094cd5af79f6"
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "data",
+              "cssSelector": "script",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1616,
+        248
+      ],
+      "id": "0b120b5c-de12-4df1-b2d8-5bb5bbda96b3",
+      "name": "HTML1"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2064,
+        152
+      ],
+      "id": "c74d5e07-9e4f-457e-95b6-d6719dab3e03",
+      "name": "Merge3"
+    },
+    {
+      "parameters": {
+        "language": "pythonNative",
+        "pythonCode": "base_url = \"https://24h.pchome.com.tw/\"\ndata = []\n\nfor item in _items:\n  promo = \"\"\n  \n  for text in item[\"json\"][\"data\"]:\n    if \"actName\" not in text:\n      continue\n\n    text = text.replace(\"\\\\\", \"\").replace(\"\\n\", \"\")\n\n    text = text.split(\"actName\\\":\\\"\", 1)[-1]\n    name, text = text.split(\"\\\",\\\"\", 1)\n    text = text.split(\"\\\"url\\\":\\\"\", 1)[-1]\n    url, text = text.split(\"\\\",\\\"\", 1)\n    text = text.split(\"\\\"full\\\":\\\"\", 1)[-1]\n    full, text = text.split(\"\\\",\\\"\", 1)\n    promo = f\"{name}：{full} ({base_url}{url})\"\n    break\n\n  data.append({\"promo\": promo})\n      \nreturn data"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        248
+      ],
+      "id": "20e1c5eb-70a8-4b9d-8362-f51aebc84fce",
+      "name": "促銷"
     }
   ],
   "pinData": {},
@@ -1648,7 +1742,7 @@
       "main": [
         [
           {
-            "node": "取要的欄位2",
+            "node": "Loop Over Items1",
             "type": "main",
             "index": 0
           }
@@ -1659,7 +1753,12 @@
       "main": [
         [
           {
-            "node": "轉成 db 欄位 (PChome)",
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request2",
             "type": "main",
             "index": 0
           }
@@ -1670,9 +1769,82 @@
       "main": [
         [
           {
+            "node": "避免 429",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [
+          {
             "node": "合併 mapping、data",
             "type": "main",
             "index": 5
+          }
+        ],
+        [
+          {
+            "node": "取要的欄位2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "HTML1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "避免 429": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML1": {
+      "main": [
+        [
+          {
+            "node": "促銷",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "轉成 db 欄位 (PChome)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "促銷": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
           }
         ]
       ]
@@ -1686,7 +1858,7 @@
     "timezone": "Asia/Taipei",
     "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "2f5e1a4f-8ba7-4724-91f6-21070e7e4ee3",
+  "versionId": "32c672d3-ca3c-4e04-87d3-f9ff93654541",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "26b01562f9767bdebc818b6b2ba158d86d29098ccd35229feef174e8f1c0297d"
